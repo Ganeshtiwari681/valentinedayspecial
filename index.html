@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Story</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <audio id="bgMusic" loop>
+        <source src="/song.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <section id="page1" class="active">
+        <div class="card glass-effect">
+            <div class="sticker-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/4213/4213562.png" alt="Bear" class="floating-sticker">
+            </div>
+            <h1 class="title">Will you be my <br> <span class="highlight">Valentine?</span></h1>
+            
+            <div class="buttons">
+                <button id="yesBtn" onclick="goToPage2()">Yes</button>
+                <button id="noBtn" onclick="growYes()">No</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="page2" class="hidden">
+        <div class="card glass-effect">
+            <h2>Let's make it official! ❤️</h2>
+            <p>Enter our details to start our story</p>
+            
+            <div class="input-group">
+                <label>Your Name (Beautiful Lady)</label>
+                <input type="text" id="herName" placeholder="Type your name...">
+            </div>
+
+            <div class="input-group">
+                <label>Partner's Name (Who sent this?)</label>
+                <input type="text" id="hisName" placeholder="Type his name...">
+            </div>
+
+            <button class="action-btn" onclick="goToPage3()">Start Our Love Story! 🚀</button>
+        </div>
+    </section>
+
+    <section id="page3" class="hidden">
+        <div class="card glass-effect wide-card">
+            <div class="illustration-box">
+                <img id="storyImage" src="https://img.freepik.com/free-vector/cute-couple-holding-big-heart-love-illustration_1308-133503.jpg" alt="Love">
+            </div>
+            <h2 id="storyQuestion">Who stole whose heart first?</h2>
+            
+            <div class="quiz-options">
+                <button class="choice-btn" onclick="nextStory()">He  🙈</button>
+                <button class="choice-btn" onclick="nextStory()">I 💘</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="page4" class="hidden">
+        <div class="card glass-effect final-card">
+            <div class="ring-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/9378/9378036.png" alt="Ring" class="ring-icon">
+            </div>
+            
+            <h1 class="names-display" id="finalNames">Boy & Girl</h1>
+            <p class="subtitle">You are a 100% perfect match forever!</p>
+            
+            <div class="big-question">
+                Will you be my Valentine forever?
+            </div>
+
+            <button class="yes-final-btn" onclick="startMatchQuiz()">YES! ❤️</button>.
+        </div>
+    </section>
+    <section id="page5" class="hidden">
+        <div class="card glass-effect wide-card">
+            <h2 class="subtitle">Wait! One last check... 🧐</h2>
+            <h1 id="matchQuestion">Who is the better cook?</h1>
+            
+            <div class="quiz-grid" id="matchOptions">
+                </div>
+            <p id="progressText">Question 1/4</p>
+        </div>
+    </section>
+
+    <section id="page6" class="hidden">
+        <div class="card glass-effect final-card">
+            <div class="meter-container">
+                <div class="meter-ring">
+                    <span id="scoreValue">0%</span>
+                </div>
+            </div>
+            
+            <h1>It's Official!</h1>
+            <p class="highlight">We are a Perfect Match!</p>
+            <p>Happy Valentine's Day My Love! ❤️</p>
+            <div class="floating-hearts">❤️❤️❤️</div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
